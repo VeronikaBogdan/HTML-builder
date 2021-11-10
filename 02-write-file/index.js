@@ -8,7 +8,7 @@ let stream = fs.createWriteStream("02-write-file/text.txt");
 
 console.log("Hello!\nInput the text");
 rl.on("line", (input) => {
-  if (input == "exit") rl.close();
+  if (input.trim() == "exit") rl.close();
   else {
     stream.write(`${input} \n`);
     console.log("Input the text");
